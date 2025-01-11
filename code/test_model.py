@@ -1,5 +1,6 @@
 #import the required libraries
 import joblib
+import os
 
 #Load the model using joblib
 model_path = os.path.join('model', 'model.joblib')
