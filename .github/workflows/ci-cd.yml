@@ -22,7 +22,9 @@ jobs:
           python-version: '3.10'
       
       - name: Install dependencies
-        run: pip install flask
+        run: 
+          pip install flask
+          pip install pytest
       
       - name: Lint with Flask
         run: flask . --exit-zero
