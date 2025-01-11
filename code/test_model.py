@@ -2,7 +2,7 @@
 import joblib
 
 #Load the model using joblib
-my_model = joblib.load('model\model.joblib')
+my_model = joblib.load('..\model\model.joblib')
 
 #Test the prediction for two values
 def test_predict():
