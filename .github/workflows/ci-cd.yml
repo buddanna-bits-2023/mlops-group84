@@ -22,9 +22,7 @@ jobs:
           python-version: '3.10'
       
       - name: Install dependencies
-        run: |
-          pip install flask
-          python -m pytest
+        run: pip install flask pytest
       
       - name: Lint with Flask
         run: flask . --exit-zero
@@ -46,7 +44,7 @@ jobs:
         run: pip install -r requirements.txt
       
       - name: Run Tests
-        run: pytest code/test_model.py
+        run: pytest -v code/test_model.py
 
   deploy:
     name: Deploy Model
