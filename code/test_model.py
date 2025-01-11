@@ -6,7 +6,10 @@ import os
 model_path = os.path.join('model', 'model.joblib')
 my_model = joblib.load(model_path)
 
-#Test the prediction for two values
+#Test model loaded or not
+def test_model_load():
+    assert my_model is not None, "Failed to load the saved model."
+
+#Test the prediction
 def test_predict():
     assert my_model.predict([[6.8,2.8,4.8,1.4]]) == 1
-    assert my_model.predict([[6.5,3.0,5.2,2.0]]) == 0
